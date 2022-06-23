@@ -7,7 +7,7 @@ RUN apt-get -y install curl wget build-essential cmake dkms \
     git autoconf automake autotools-dev gdb libglib2.0-dev libgtk2.0-dev \
     libusb-dev libusb-1.0-0-dev freeglut3-dev libboost-dev libatlas-base-dev \
     libgsl-dev default-jdk doxygen code
-RUN apt-get -y install libjpeg8-dev libtiff-dev libpng-dev \
+RUN apt-get -y install libjpeg-dev libtiff-dev libpng-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libcanberra-gtk-module libdc1394-22-dev
 RUN apt-get -y install libopencv-dev opencv-doc
