@@ -10,11 +10,11 @@ RUN apt-get -y install curl wget build-essential cmake dkms \
 RUN apt-get -y install libjpeg-dev libtiff-dev libpng-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libcanberra-gtk-module libdc1394-22-dev
-RUN apt-get -y install libopencv-dev opencv-doc
-RUN apt-get -y install python3-dev \
-    python3-numpy python3-matplotlib python3-opencv python3-scipy cython3 python3-picamera
+#RUN apt-get -y install libopencv-dev opencv-doc
+#RUN apt-get -y install python3-dev \
+#    python3-numpy python3-matplotlib python3-opencv python3-scipy cython3 python3-picamera
 RUN apt-get -y install libglib2.0-dev python-gtk2 libgtk2.0-dev mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libjpeg-dev
-RUN apt-get install -y python3-pip --upgrade
+#RUN apt-get install -y python3-pip --upgrade
 
 
 RUN apt-get install ufw -y
