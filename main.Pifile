@@ -1,6 +1,6 @@
 FROM https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2022-04-07/2022-04-04-raspios-bullseye-armhf.img.xz
 
-PUMP 8000M
+PUMP 12000M
 
 # RUN touch /boot/ssh
 RUN raspi-config nonint do_vnc 0
