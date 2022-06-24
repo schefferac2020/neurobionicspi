@@ -41,7 +41,8 @@ RUN bash -c "mkdir /home/${user}/lcm/build"
 RUN bash -c "cd /home/${user}/lcm/build"
 RUN bash -c "cmake /home/${user}/lcm"
 RUN bash -c "make && make install"
-RUN bash -c "python3 /home/${user}/lcm/lcm-python/setup.py install"
+RUN bash -c "cd /home/${user}/lcm/lcm-python"
+RUN bash -c "python3 setup.py install"
 
 
 
