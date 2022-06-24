@@ -1,9 +1,10 @@
 # Add bash commands to install required packages
-RUN apt-get -y install dkms \
+RUN apt-get -y install build-essential wget dkms cmake\
     autoconf automake autotools-dev gdb libglib2.0-dev libgtk2.0-dev \
     libusb-dev libusb-1.0-0-dev freeglut3-dev libboost-dev libatlas-base-dev \
     libgsl-dev libjpeg-dev default-jdk doxygen code
-RUN apt-get -y install cmake mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev 
+RUN apt-get -y install gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
+RUN apt-get -y install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev 
 # Install LCM
 RUN bash -c "git clone https://github.com/lcm-proj/lcm.git /home/${user}/lcm"
 RUN bash -c "mkdir /home/${user}/lcm/build"
@@ -11,7 +12,18 @@ RUN bash -c "cd /home/${user}/lcm/build"
 RUN bash -c "cmake /home/${user}/lcm"
 RUN bash -c "make && make install"
 RUN bash -c "cd /home/${user}/lcm/lcm-python"
-#RUN bash -c "python3 /home/${user}/lcm/lcm-python/setup.py install"
+RUN bash -c "python3 setup.py install"
+
+RUN bash -c "cd /home/${user}"
+RUN bash -c "wget https://raw.githubusercontent.com/raspberrypi/pico-setup/master/pico_setup.sh"
+RUN bash -c "chmod +x pico_setup.sh"
+RUN bash -c "./pico_setup.sh"
+
+RUN bash -c "git clone https://github.com/raspberrypi/pico-sdk.git"
+RUN bash -c "git clone https://github.com/raspberrypi/pico-examples.git"
+RUN bash -c "cd pico-sdk"
+RUN bash -c "git submodule --init"
+RUN bash -c "cd /home/${user}"
 
 RUN apt install -y libnss-resolve
 # From 550 install script F2020
