@@ -10,15 +10,15 @@ RUN raspi-config nonint do_camera 0
 
 source .env
 
-hostname="${HOSTNAME:-neurobionics}"
+hostname="${HOSTNAME:-mbot-test}"
 user="${USER:-pi}"
-password="${USERPASSWORD:-neurobionics}"
-email="${EMAIL:-ejrouse@umich.edu}"
+password="${USERPASSWORD:-iloverobots}"
+email="${EMAIL:-pgaskell@umich.edu}"
 mwpsk="${PASSWORD:-password}"
 wifissid="${WIFI_SSID:-network}"
 wifipsk="${WIFI_PASSPHRASE:-password}"
-apssid="${AP_SSID:-NeurobionicsRPi}"
-appsk="${AP_PASSPHRASE:-neurobionics}"
+apssid="${AP_SSID:-mbot-ap}"
+appsk="${AP_PASSPHRASE:-iloverobots}"
 countrycode="${WIFI_CC:-US}"
 
 ##################################
