@@ -21,7 +21,7 @@ on:
       email:
         description: "Email"
         required: true
-        default: pgaskell@umich.edu
+        default: obagroen@umich.edu
       wifi_cc:
         description: "WiFi Country Code"
         required: true        

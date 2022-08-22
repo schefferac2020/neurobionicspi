@@ -13,7 +13,7 @@ source .env
 hostname="${HOSTNAME:-mbot-test}"
 user="${USER:-pi}"
 password="${USERPASSWORD:-iloverobots}"
-email="${EMAIL:-pgaskell@umich.edu}"
+email="${EMAIL:-obagoren@umich.edu}"
 mwpsk="${PASSWORD:-password}"
 wifissid="${WIFI_SSID:-network}"
 wifipsk="${WIFI_PASSPHRASE:-password}"
