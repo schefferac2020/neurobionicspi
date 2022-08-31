@@ -21,7 +21,7 @@ on:
       email:
         description: "Email"
         required: true
-        default: lizolson@umich.edu
+        default: {YOUR EMAIL}@umich.edu
       wifi_cc:
         description: "WiFi Country Code"
         required: true        
